@@ -15,7 +15,7 @@ trait TenantModels
         static::addGlobalScope(new TenantScope());
 
         static::creating(function (Model $obj) {
-            $tenant = MultiTenant::get();
+            $tenant = \MultiTenant::get();
             if ($tenant) {
                 $obj->tenant_id = $tenant->id;
             }
@@ -27,5 +27,3 @@ trait TenantModels
         return $this->belongsTo(Tenant::class);
     }
 }
-
-//Category::all()
