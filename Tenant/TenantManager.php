@@ -20,7 +20,7 @@ class TenantManager
     /**
      * @param Company $tenant
      */
-    public function set(?Tenant $tenant): void
+    public function set($tenant): void
     {
         $this->tenant = $tenant;
     }
