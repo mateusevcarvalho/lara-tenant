@@ -20,7 +20,7 @@ Pacote Laravel desenvolvido para aplicações multitenant.
     
 5 - Publique o model do Tenant: `Lembre-se de criar uma tabela Tenant para dar referencia ao model`
 
-    php artisan vendor:publish --provider=Modules\MultiTenant\Providers\MultiTenantServiceProvider --tag=tenantModel
+    php artisan vendor:publish --tag=tenantModel
     
 # Exemplos de uso
 Nas rotas com autenticação coloque o middleware `tenant` e coloque o: `bindings` para não ter problemas na aplicação e para setar o tenant logado:
