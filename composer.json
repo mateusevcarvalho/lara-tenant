@@ -6,5 +6,10 @@
             "email": "mateusev.carvalho@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\MultiTenant" : "./"
+        }
+    },
     "require": {}
 }
