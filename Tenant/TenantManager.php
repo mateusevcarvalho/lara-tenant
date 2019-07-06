@@ -12,7 +12,7 @@ class TenantManager
     /**
      * @return Company
      */
-    public function get(): ?Tenant
+    public function get()
     {
         return $this->tenant;
     }
