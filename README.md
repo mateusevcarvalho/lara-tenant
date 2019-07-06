@@ -1,4 +1,3 @@
-# lara-tenant
 Pacote Laravel desenvolvido para aplicações multitenant.
 
 # Instalação
