@@ -30,14 +30,14 @@ Nas rotas com autenticação coloque o middleware `tenant` e coloque o: `binding
       Route::apiResource('produtos', 'ProdutosController');
     });
     
-Para setar um tenant use `MultiTenant::set($tenant)`, e para recuperar: `MultiTenant::get()`, como o exemplo abaixo:
+Para setar um tenant use `\MultiTenant::set($tenant)`, e para recuperar: `\MultiTenant::get()`, como o exemplo abaixo:
 
     public function store(Request $request)
     {
         DB::beginTransaction();
         $formData = $request->all();
         $tenant = Tenant::create(['uuid' => Uuid::generate()->string]);
-        MultiTenant::set($tenant);
+        \MultiTenant::set($tenant);
         $individuo = $tenant->individuo()->create($formData['individuos']);
         $user = $individuo->user()->create([
             'status' => $formData['users']['status'],
