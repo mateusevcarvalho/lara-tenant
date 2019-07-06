@@ -16,7 +16,7 @@ class TenantMiddleware
     public function handle($request, Closure $next)
     {
         $user = auth()->user();
-        MultiTenant::set($user->tenant);
+        \MultiTenant::set($user->tenant);
         return $next($request);
     }
 }
