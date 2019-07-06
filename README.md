@@ -18,8 +18,9 @@ Pacote Laravel desenvolvido para aplicações multitenant.
 
     'tenant' =>  \Modules\MultiTenant\Http\Middleware\TenantMiddleware::class
     
-5 - Publique o model do Tenant: `Lembre-se de criar uma tabela Tenant para dar referencia ao model`
+5 - Publique o model do Tenant: `Lembre-se de criar uma tabela Tenant para dar referencia ao model`:
 
+    php artisan make:migration create_tenants_table
     php artisan vendor:publish --tag=tenantModel
     
 # Exemplos de uso
