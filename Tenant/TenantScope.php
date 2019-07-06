@@ -19,7 +19,7 @@ class TenantScope implements Scope
      */
     public function apply(Builder $builder, Model $model)
     {
-        $tenant = MultiTenant::get();
+        $tenant = \MultiTenant::get();
         if ($tenant) {
             $builder->where('tenant_id', $tenant->id);
         }
